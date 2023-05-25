@@ -14,4 +14,4 @@ Fake values obviously.. replace with your own. Can find them in toggle profile s
 
 ## How to use
 
-See src/app.js for examples. Right now you have to call `createDefaultWorkWeek` or 'createDefaultWorkday' manually. Will hopefully expand on this to automate more in the future if this proves useful.
+See src/app.js for examples. Right now you have to call `createDefaultWorkWeek` or `createDefaultWorkday` manually. Will hopefully expand on this to automate more in the future if this proves useful.
