@@ -53,8 +53,9 @@ const createTimeBlock = async (description, projectId, startDate, hours) => {
 };
 
 
-//To use directly: createDefaultWorkday("My description", togglProjectId, '05/25/2023');
-const createDefaultWorkday = async (description, projectId, dayStr) => {
+// To use directly (run below all functions): 
+// createDefaultWorkDay("My description", togglProjectId, '05/25/2023');
+const createDefaultWorkDay = async (description, projectId, dayStr) => {
 
     //Creates a default workday. 3 hours. 9-12. Break 12-1. 4 hours. 1-5.
     const startDateTime = new Date(dayStr);
@@ -74,6 +75,8 @@ const createDefaultWorkday = async (description, projectId, dayStr) => {
     await sleep(1000); 
 };
 
+// To use directly (run below all functions):
+// createDefaultWorkWeek("Example description", togglProjectId, '05/15/2023');
 const createDefaultWorkWeek = async (description, projectId, anyDayInWeek) => {
     // Create a new date object from the ISO string
     const date = new Date(anyDayInWeek);
@@ -94,12 +97,7 @@ const createDefaultWorkWeek = async (description, projectId, anyDayInWeek) => {
         // Format the workday to a string in mm/dd/yyyy format
         const dayStr = `${workday.getMonth() + 1}/${workday.getDate()}/${workday.getFullYear()}`;
         
-        await createDefaultWorkday(description, projectId, dayStr);
+        await createDefaultWorkDay(description, projectId, dayStr);
     }
 };
 
-createDefaultWorkWeek("Boss", togglProjectId, '05/15/2023');
-createDefaultWorkWeek("Localisation", togglProjectId, '05/9/2023');
-createDefaultWorkWeek("Playtesting and quick wins", togglProjectId, '05/2/2023');
-createDefaultWorkWeek("Shadow hiding and style volumes", togglProjectId, '04/25/2023');
-createDefaultWorkWeek("Fixing broken runtime gizmos + Finishing offset maps", togglProjectId, '04/18/2023');
