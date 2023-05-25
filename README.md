@@ -4,7 +4,7 @@
 
 Ever have to retroactivley set a bunch of times in toggl? this script allows you to do that without having to use the slow Toggl GUI.
 
-create a .env in the project root, and put your toggl api key and project you would like to update in it.
+create a .env in the project root, and put your toggl api key and project id you would like to update in it.
 Eg... 
 ```
 TOGGL_API_TOKEN=1234XYZABC
